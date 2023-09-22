@@ -98,19 +98,26 @@ Seorang anak bernama Udin Berteman dengan SlameT yang merupakan seorang penggema
 ### Jawaban
 
 ## Soal 7
-Berapa jumlah packet yang menuju IP 184.87.193.88?
+Berapa jumlah packet yang menuju `IP 184.87.193.88`?
 
 ### Jawaban
+Dengan menggunakan filter `ip.dst == 184.87.193.88` dapat dilihat jumlah packet yang menuju `IP 184.87.193.88` dan packet nya berjumlah 6.
+![Screenshot (5864)](https://github.com/farah-dhiaf/Jarkom-Modul-Y-E09-2023/assets/129358222/bb19152a-5658-4c55-be1a-7a2f4ea3e67e)
+
+![no 7 git](https://github.com/farah-dhiaf/Jarkom-Modul-Y-E09-2023/assets/129358222/7013ead2-766d-48ef-9877-4a52a93b5d58)
 
 ## Soal 8
 Berikan kueri filter sehingga wireshark hanya mengambil semua protokol paket yang menuju port 80! (Jika terdapat lebih dari 1 port, maka urutkan sesuai dengan abjad)
 
 ### Jawaban
+Dengan menggunakan filter `tcp.dstport == 80 || udp.dstport == 80` akan menangkap semua packet yang menuju port 80 baik melalui protokol TCP maupun UDP dan hasilnya akan diurutkan berdasarkan abjad.
+
 
 ## Soal 9
-Berikan kueri filter sehingga wireshark hanya mengambil paket yang berasal dari alamat 10.51.40.1 tetapi tidak menuju ke alamat 10.39.55.34!
+Berikan kueri filter sehingga wireshark hanya mengambil paket yang berasal dari alamat `10.51.40.1` tetapi tidak menuju ke alamat `10.39.55.34`!
 
 ### Jawaban
+Dengan menggunakan filter `ip.src == 10.51.40.1` maka paket akan di filter hanya berasal dari alamat tersebut, dan dengan menambahkan logical operator && beserta `ip.dst != 10.39.55.34`maka pake yang menuju `10.39.55.34` akan difilter untuk tidak ditampilkan.
 
 ## Soal 10
 Sebutkan kredensial yang benar ketika user mencoba login menggunakan Telnet
