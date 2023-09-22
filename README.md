@@ -135,7 +135,7 @@ Dengan menggunakan filter `telnet contains "Password"` saya menemukan 1 packet. 
 ![10 2](https://github.com/farah-dhiaf/Jarkom-Modul-Y-E09-2023/assets/129358222/01a7050f-1af8-413e-a80a-99f7bc06c4ff)
 
 Huruf yang berwarna biru adalah huruf yang dikirim oleh server ke client. Sedangkan hurif yang berwarna merah adalah huruf yang dikirim oleh client ke server.
-maka Username dan Password nya adalah : dhafin:kesayangannyak0k0
+maka Username dan Password nya adalah : `dhafin:kesayangannyak0k0`
 ![10 git](https://github.com/farah-dhiaf/Jarkom-Modul-Y-E09-2023/assets/129358222/edd29d84-86a3-48ab-b34b-19423e3d4e1b)
 
 
