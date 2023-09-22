@@ -93,9 +93,19 @@ Lalu untuk soal 5b, saya memfilter packet yang menggunakan service SMTP dengan `
 Terakhir, untuk soal 5c alamat IP yang merupakan public IP adalah `74.53.140.153`
 
 ## Soal 6
-Seorang anak bernama Udin Berteman dengan SlameT yang merupakan seorang penggemar film detektif. sebagai teman yang baik, Ia selalu mengajak slamet untuk bermain valoranT bersama. suatu malam, terjadi sebuah hal yang tak terdUga. ketika udin mereka membuka game tersebut, laptop udin menunjukkan sebuah field text dan Sebuah kode Invalid bertuliskan "server SOURCE ADDRESS 7812 is invalid". ketika ditelusuri di google, hasil pencarian hanya menampilkan a1 e5 u21. jiwa detektif slamet pun bergejolak. bantulah udin dan slamet untuk menemukan solusi kode error tersebut.
+Seorang anak bernama Udin Berteman dengan SlameT yang merupakan seorang penggemar film detektif. sebagai teman yang baik, Ia selalu mengajak slamet untuk bermain valoranT bersama. suatu malam, terjadi sebuah hal yang tak terdUga. ketika udin mereka membuka game tersebut, laptop udin menunjukkan sebuah field text dan Sebuah kode Invalid bertuliskan "server SOURCE ADDRESS 7812 is invalid". ketika ditelusuri di google, hasil pencarian hanya menampilkan a1 e5 u21. jiwa detektif slamet pun bergejolak. bantulah udin dan slamet untuk menemukan solusi kode error tersebut.</br>
+nc 10.21.78.111 6666
+
+![soal 6](img/soal-6.png)
 
 ### Jawaban
+Pada soal tersebut ada beberapa kejanggalan dalam penulisan yang menjadi hint pertama kami.</br>
+![hint](img/hint.png)
+
+Bisa kita lihat bahwa huruf-huruf kapital tersebut membentuk suatu kata `SUBSTITUSI` yang mana nantinya kita akan substitusi petunjuk berikutnya. Lalu pada soal dikatakan bahwa **"server SOURCE ADDRESS 7812 is invalid"** maka kita perlu mengetahui source address pada packet dengan nomor 7812. Saya memfilter source address dengan nomor packet 7812 dengan `frame.number == 7812`</br>
+![frame 7812](img/frame-7812.png)
+
+Bisa kita lihat pada packet nomor 7812 memiliki source address `104.18.14.101` selanjutnya kami menggunakan hint yang tertera pada soal yaitu a1 e5 u21, karakter tersebut merupakan sebuah alphabet dan urutannya, seperti a merupakan alphabet ke-1, e merupakan alphabet ke-5, dan u merupakan alphabet ke-21. Oleh karena alphabet hanya sampai 26, maka kita perlu memparsing ip tersebut menjadi angka-angka yang ada pada alphabet. Hasil parsing tersebut adalah `10 4 18 14 10 1` dan jika diubah ke huruf alphabet, maka akan mendapatkan `JDRJNA`. 
 
 ## Soal 7
 Berapa jumlah packet yang menuju `IP 184.87.193.88`?
