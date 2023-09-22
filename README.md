@@ -116,7 +116,7 @@ Dengan menggunakan filter `tcp.dstport == 80 || udp.dstport == 80` akan menangka
 Untuk mengurutkan sesuai abjad dapat menekan tulisan protocol pada wireshark, maka akan diurutkan sesuai abjad.
 ![8 2](https://github.com/farah-dhiaf/Jarkom-Modul-Y-E09-2023/assets/129358222/574bef6c-be4c-4829-a485-ff12a3565a11)
 
-
+![8 git](https://github.com/farah-dhiaf/Jarkom-Modul-Y-E09-2023/assets/129358222/370ac0bb-8b9b-46ef-b629-bc50d304f376)
 
 ## Soal 9
 Berikan kueri filter sehingga wireshark hanya mengambil paket yang berasal dari alamat `10.51.40.1` tetapi tidak menuju ke alamat `10.39.55.34`!
@@ -139,6 +139,5 @@ maka Username dan Password nya adalah : dhafin:kesayangannyak0k0
 ![10 git](https://github.com/farah-dhiaf/Jarkom-Modul-Y-E09-2023/assets/129358222/edd29d84-86a3-48ab-b34b-19423e3d4e1b)
 
 
-
-
 ## Kendala
+Kami tidak bisa menyelesaikan soal no 6.
