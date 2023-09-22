@@ -110,7 +110,12 @@ Dengan menggunakan filter `ip.dst == 184.87.193.88` dapat dilihat jumlah packet 
 Berikan kueri filter sehingga wireshark hanya mengambil semua protokol paket yang menuju port 80! (Jika terdapat lebih dari 1 port, maka urutkan sesuai dengan abjad)
 
 ### Jawaban
-Dengan menggunakan filter `tcp.dstport == 80 || udp.dstport == 80` akan menangkap semua packet yang menuju port 80 baik melalui protokol TCP maupun UDP dan hasilnya akan diurutkan berdasarkan abjad.
+Dengan menggunakan filter `tcp.dstport == 80 || udp.dstport == 80` akan menangkap semua packet yang menuju port 80 baik melalui protokol TCP maupun UDP. 
+![8 1](https://github.com/farah-dhiaf/Jarkom-Modul-Y-E09-2023/assets/129358222/bb8d10c9-4497-4878-84ec-49dd1ce52e8f)
+
+Untuk mengurutkan sesuai abjad dapat menekan tulisan protocol pada wireshark, maka akan diurutkan sesuai abjad.
+![8 2](https://github.com/farah-dhiaf/Jarkom-Modul-Y-E09-2023/assets/129358222/574bef6c-be4c-4829-a485-ff12a3565a11)
+
 
 
 ## Soal 9
@@ -118,10 +123,22 @@ Berikan kueri filter sehingga wireshark hanya mengambil paket yang berasal dari 
 
 ### Jawaban
 Dengan menggunakan filter `ip.src == 10.51.40.1` maka paket akan di filter hanya berasal dari alamat tersebut, dan dengan menambahkan logical operator && beserta `ip.dst != 10.39.55.34`maka pake yang menuju `10.39.55.34` akan difilter untuk tidak ditampilkan.
+![9](https://github.com/farah-dhiaf/Jarkom-Modul-Y-E09-2023/assets/129358222/126db907-1696-45de-ae84-b69814ddda32)
+
 
 ## Soal 10
 Sebutkan kredensial yang benar ketika user mencoba login menggunakan Telnet
 
 ### Jawaban
+Dengan menggunakan filter `telnet contains "Password"` saya menemukan 1 packet. Kemudian follow TCP stream nya maka akan terlihat Username dan Password nya.
+![10 1](https://github.com/farah-dhiaf/Jarkom-Modul-Y-E09-2023/assets/129358222/1ec7778c-8728-438f-94dd-f426633b6051)
+![10 2](https://github.com/farah-dhiaf/Jarkom-Modul-Y-E09-2023/assets/129358222/01a7050f-1af8-413e-a80a-99f7bc06c4ff)
+
+Huruf yang berwarna biru adalah huruf yang dikirim oleh server ke client. Sedangkan hurif yang berwarna merah adalah huruf yang dikirim oleh client ke server.
+maka Username dan Password nya adalah : dhafin:kesayangannyak0k0
+![10 git](https://github.com/farah-dhiaf/Jarkom-Modul-Y-E09-2023/assets/129358222/edd29d84-86a3-48ab-b34b-19423e3d4e1b)
+
+
+
 
 ## Kendala
