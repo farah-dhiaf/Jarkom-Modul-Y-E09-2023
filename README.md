@@ -96,3 +96,4 @@ Terakhir, untuk soal 5c alamat IP yang merupakan public IP adalah `74.53.140.153
 ## Soal 8
 ## Soal 9
 ## Soal 10
+## Kendala
